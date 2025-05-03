@@ -1,0 +1,153 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.75rem;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-white/10 selection:text-white;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+
+  /* Enhanced text styles for better readability */
+  h1 {
+    @apply font-bold text-white text-4xl tracking-tight;
+  }
+  
+  h2 {
+    @apply font-bold text-white text-3xl tracking-tight;
+  }
+  
+  h3 {
+    @apply font-bold text-white text-2xl;
+  }
+  
+  h4, h5, h6 {
+    @apply font-bold text-white text-xl;
+  }
+  
+  p, span, div {
+    @apply text-white/90;
+  }
+  
+  label {
+    @apply text-white/90 font-medium;
+  }
+  
+  a {
+    @apply text-campus-purple hover:text-campus-purple/80 transition-colors;
+  }
+  
+  input, select, textarea {
+    @apply text-white placeholder:text-white/50;
+  }
+  
+  button {
+    @apply text-white font-medium;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg;
+  }
+  
+  .glass-morphism {
+    @apply bg-white/40 backdrop-blur-md border border-white/30 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+  }
+  
+  .animate-once {
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  /* Enhanced readability classes */
+  .text-enhanced {
+    @apply text-white font-medium;
+  }
+  
+  .text-high-contrast {
+    @apply text-white drop-shadow-sm;
+  }
+  
+  .text-subtle {
+    @apply text-white/80;
+  }
+  
+  /* New utility classes for better visibility */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .text-outline {
+    text-shadow: 
+      -1px -1px 0 rgba(0, 0, 0, 0.5),
+      1px -1px 0 rgba(0, 0, 0, 0.5),
+      -1px 1px 0 rgba(0, 0, 0, 0.5),
+      1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+}
